@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>作业</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../lib/global.css">
+	<link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+	<section>
+		<div class="img-box">
+			<img src="1.jpg" alt="" class="active" style="z-index: 1;">
+			<img src="2.jpg" alt="" style="z-index: 0;">
+			<img src="3.jpg" alt="" style="z-index: 0;">
+		</div>
+		<div class="img-nav">
+			<span class="active">1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>
+	</section>
+<script type="text/javascript" src="../lib/common.js"></script>
+<script>
+	$(function(){
+		var stopInterval = false;
+		var myInter = setInterval(function(){
+			if(stopInterval) return;
+			setImg();
+		},2000);
+		function setImg( index ){
+			if( index == undefined ){
+				var _index = $("img.active").index();
+				index = ( _index + 1 )%3;
+			}
+			$('.img-box img').eq( index ).stop(true, true).addClass('active').fadeIn(500).siblings().removeClass('active').fadeOut(500);
+			$('.img-nav span').eq( index ).addClass('active').siblings().removeClass('active');
+		}
+		$('.img-nav span').hover(function(){
+			setImg();
+			stopInterval = true;
+			// clearInterval( myInter );
+		},function(){
+			stopInterval = false;
+			// myInter = setInterval(function(){
+			// 	setImg();
+			// },2000);
+		})
+	})
+</script>
+</body>
+</html>

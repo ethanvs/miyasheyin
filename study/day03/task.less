@@ -1,0 +1,35 @@
+.group-item{
+	width: 900px;
+	margin: 50px auto;
+	h3{
+		font-size: 18px;
+		margin-top: 30px;
+	}
+	ul{
+		li{
+			float: left;
+			width: 190px;
+			padding: 10px 15px 0 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			word-break: keep all;
+			.mn-checkbox-item{
+				width: 15px;
+			    height: 15px;
+			    display: inline-block;
+			    vertical-align: middle;
+			    background-image: url(ico-check.png)!important;
+			    background-repeat: no-repeat;
+			    background-position: 0 -30px;
+			    cursor: pointer;
+			    &.mn-selected{
+					background: url(mn-form-icon.png) no-repeat;
+			    }
+			}
+			.check-lb{
+				padding-left: 5px;
+			}
+		}
+	}
+}

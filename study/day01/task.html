@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>hello world</title>
+	<link rel="stylesheet" type="text/css" href="../lib/global.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<section class="demo01">
+		<div class="navTable">
+			<span data-type="info" class="active">切换内容一</span>
+			<span data-type="lee">切换内容二</span>
+			<span data-type="jiankang">切换内容三</span>
+		</div>
+		<div class="navContent">
+			<div class="content info">这是一个简单的JQ切换效果。</div>
+			<div class="content lee" style="display:none;">药不能停，药不能停</div>
+			<div class="content jiankang" style="display:none;">生活不止眼前的苟且，还得赚钱</div>
+		</div>
+	</section>
+<script type="text/javascript" src="../lib/common.js"></script>
+<script>
+	window.onload = function(){
+		console.log( +new Date() );
+	}
+	$(function(){
+		console.log( +new Date() );
+	});
+	$(function(){
+		$('.demo01').on('click','.navTable span',function(e){
+			$(e.currentTarget).addClass('active').siblings().removeClass('active');
+			$('.' + $(e.currentTarget).data('type') ).show().siblings().hide();
+		});
+	})
+</script>
+</body>
+</html>
