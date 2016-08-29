@@ -2,6 +2,22 @@
   width: 50%;
   margin: 30px auto;
 }
+.app .box {
+  width: 200px;
+  height: 100px;
+  background: green;
+  color: #5b83ad;
+}
+.app .box:hover {
+  color: black;
+}
+.app .box.box1 {
+  border: 1px solid black;
+}
+.app .box .innerdiv {
+  border: 1px solid yellow;
+  width: 100px;
+}
 .app h1,
 .app h2,
 .app h3 {

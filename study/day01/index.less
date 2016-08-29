@@ -1,4 +1,24 @@
+
+// 加变量 用法 color: @nice-blue;
+@nice-blue: #5B83AD;
 .app{
+	.box{
+		width: 200px;
+		height: 100px;
+		background: green;
+		color: @nice-blue;
+		&:hover{
+			color:black;
+		}
+		&.box1{
+			border: 1px solid black;
+		}
+		.innerdiv{
+			border: 1px solid yellow;
+			width: 100px;
+		}
+
+	}
 	width: 50%;
 	margin: 30px auto;
 	h1,h2,h3{

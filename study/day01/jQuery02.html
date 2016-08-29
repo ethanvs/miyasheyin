@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<div id="div-box">div节点id</div>
+	<div class="div-box">div节点class</div>
+	<div>div节点标签</div>
+	<div data-type="jquery">自定义方式查询</div>
+	<div asdfj="sfsl">自定义查询2</div>
+
+	<script type="text/javascript" src="../lib/common.js"></script>
+	<script>
+		// 简化 $(document).ready(function(){})
+		$(function(){
+			// 以id方式获取节点，返回集合
+			var $el = $('#div-box');
+
+			// jQuery对象转换为原生对象
+			$el[0];
+
+			// js原生 操作返回节点，不是集合
+			var _el = document.getElementById('div-box');
+
+			$(_el);  // 原生对象转换为jQuery对象
+
+			// 以class的方式获取对象
+			var $el2 = $('.div-box');
+
+			$el2[0]; //转换为原生节点对象
+
+			// 转换为js原生节点后再转换为jQuery
+			$($el2[0]);
+
+			// 通过标签名操作获取
+			var $el3 = $('div');
+
+			/*
+				jQuery 获取节点的主要方式
+				# + 'id名'
+				. + 'class名'
+				标签名
+				自定义查询
+			*/
+			$('[data-type = "jquery"]');
+			$('[asdfj = "sfsl"]');
+
+
+
+
+			
+		})
+	</script>
+</body>
+</html>
