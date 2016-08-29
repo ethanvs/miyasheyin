@@ -28,11 +28,14 @@
 		console.log( +new Date() );
 	});
 	$(function(){
+		// .data() 从标签里面取值
+		// <div class="myclass" data-username="zhansan"></div>
+		// $('.myclass').data('username') //输出zhangsan
 		$('.demo01').on('click','.navTable span',function(e){
 			$(e.currentTarget).addClass('active').siblings().removeClass('active');
 			$('.' + $(e.currentTarget).data('type') ).show().siblings().hide();
 		});
-	})
+	});
 </script>
 </body>
 </html>

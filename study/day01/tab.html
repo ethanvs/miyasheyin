@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		*{ margin: 0; padding: 0; }
+
+		.clear:after{ content:'';clear:both;display: block;height:0; }
+		.claer{ -ms-zoom:1; }
+		
+		ul{ margin:0 auto;width: 350px;background-color: lightgray; }
+		ul>li{ width: 100px;list-style: none;float:left;border: 2px solid rgba(0,0,0,0);margin-right: 10px;
+			text-align: center; }
+		ul>li:hover{ border-bottom: 2px solid orange;color:orange; }
+		.active{ border-bottom: 2px solid orange;color:orange; }
+		#mydiv{ margin:0 auto;width:350px; }
+		#mydiv div{ background-color: lightyellow;width:350px;height:200px;
+			display: none; }
+	</style>
+</head>
+<body>
+	<ul class="clear">
+		<li class="active">tab1</li>
+		<li>tab2</li>
+		<li>tab3</li>
+	</ul>
+	<div id="mydiv">
+		<div style="display:block" id="div1">tab1afdfasf</div>
+		<div id="div2">tab2afdfa</div>
+		<div id="div3">tab3asfdaf</div>
+	</div>
+
+	<script src="../lib/jquery-3.1.0.min.js"></script>
+	<script>
+		$(function(){
+			$('ul').on('click','li',function(e){
+				$(e.currentTarget).addClass('active').siblings().removeClass('active');
+				var $index = $(e.currentTarget).index();
+				// $('#mydiv div:eq(' + $index + ')' ).show().siblings().hide();
+				$('#mydiv div').eq($index).show().siblings().hide();
+			});
+
+			/*$('ul li').hover(function(e){
+				$(e.currentTarget).addClass('active');
+			},function(e){
+				$(e.currentTarget).removeClass('active')
+			});*/
+		});
+	</script>
+</body>
+</html>
