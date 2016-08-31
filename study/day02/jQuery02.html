@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<div class="group-item parent">
+		<div class="group-item" data-username="zhangsan">
+			<div>用户名：</div>
+			<input type="text">
+		</div>
+	</div>
+
+
+	<div class="group-item">
+		<div class="intem-box">
+			<div>密码：</div>
+			<input type="password">
+		</div>
+	</div>
+		<p class="myclass">目标节点p</p>
+		<input type="password">
+
+	<script src="../lib/jquery-3.1.0.min.js"></script>
+	<script>
+		$(function(){
+			// empty() 把元素内部的节点清空
+			// html('') 同样可以达到效果
+			// $('p.myclass').empty();
+
+			$('p.myclass').click(function(e){
+				alert( $(e.currentTarget).index() );
+			});
+			// clone() 复制节点元素
+			// clone(true) 深度clone 复制节点及其绑定事件
+			$('body').append($('p.myclass').clone(true).addClass('class2'));
+
+			// replaceWith() 替换节点 直接把当前操作对象覆盖
+			// $('p.class2').replaceWith('<li>替换了class2的p标签</li>');
+
+			// wrap() 把元素包裹起来
+			$('p.class2').wrap('<div class="itswrap"></div>');
+
+			// hasClass() 判断是否包含某个class  返回Boolean值
+			// 常用
+			$('p').each(function(index,item){
+				// if( $(item).hasClass('class2') ){
+				// 	console.log(true);
+				// }else{
+				// 	console.log(false);
+				// }
+				console.log( $(item).hasClass('class2') );
+			});
+
+			// jquery事件 $('').事件名(function(){ do something }); 事件名为js里面的on去掉。
+			// $('p').hover(function(){})
+
+			// 常用于表单验证，，对输入框强制聚焦
+			$('input:password').focus();
+
+			// .next() 元素的后面一个元素
+			console.log( $('p.myclass:eq(0)').next().attr('type') );
+
+			// prev() 元素的前面一个元素
+			console.log( $('input:password').prev().html() );
+
+			// closest() 向元素的上级查找，找到最近的一个
+
+			var username = $('input:text').closest('.group-item').data('username');
+			console.log(username);
+
+			// parsent() parents() closest() 区别
+			$('input:text').parent();
+			$('input:text').parents();
+
+			// 向上查找，返回parent集合，然后在集合中过滤
+			$('input:text').parents().find('.parent');
+
+			// 向上查找，查找过程中把parent匹配处理
+			$('input:text').parents('.parents');
+
+			// 自定义事件的创建捕获
+			$(document).on('qwe','p.class2',function(e,data){
+				alert('trigger success' + data.name );
+			});
+
+			// 自定义事件的触发
+			// $('p.class2').trigger('qwe',{name:'zhangsan',age:26})
+
+		});
+	</script>
+</body>
+</html>
