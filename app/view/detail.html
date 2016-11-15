@@ -1,0 +1,62 @@
+<div class="top"></div>
+<div class="content clear">
+	<div class="left">
+		<h3>
+			<a href="#">摄影作品 <b>WORK</b></a>
+			<p>Welcome To MIYA photography</p>
+		</h3>
+		<h4>
+			最新案例
+			<b>CASE</b>
+		</h4>
+		<ul>
+			<li>
+				<div class="img">
+					<img src="images/enj2.jpg" alt="">
+					<a href=""></a>
+				</div>
+				<p>十月新都桥婚纱照片——新桥恋人</p>
+			</li>
+			<li>
+				<div class="img">
+					<img src="images/enj3.jpg" alt="">
+					<a href=""></a>
+				</div>
+				<p>十月新都桥婚纱照片——日光倾城</p>
+			</li>
+		</ul>
+		<div class="hot">
+			<h4>
+				<a href="news.html">最新促销活动</a>
+				<b>CASE</b>
+				<p>EVEVTS</p>
+			</h4>
+			<div class="con1">
+				<img class="img" src="images/d.png" alt="">
+				<p>
+					三亚五天套餐价格18999元
+				</p>
+			</div>
+			<div class="con2">
+				<a href="#">1天丽江双廊婚纱价格3999元</a>
+				<a href="#">1天丽江双廊婚纱价格3999元</a>
+				<a href="#">1天丽江双廊婚纱价格3999元</a>
+			</div>
+		</div>
+	</div>
+	<div class="right">
+		<div class="txt">
+			<h5>{{txtList[0].title}}
+				<p>{{txtList[0].autor}} &nbsp;  {{txtList[0].time}}</p>
+			</h5>
+			<p class="p">{{txtList[0].del}}</p>
+		</div>
+		<ul class="img-box">
+			##for(var i = 0; i < imgList.length; i++){##
+				<li>
+					<img src="{{imgList[i].img}}" alt="">
+				</li>
+			##}##
+		</ul>
+	</div>
+</div>

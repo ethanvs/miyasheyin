@@ -1,0 +1,69 @@
+<div class="top"></div>
+<div class="content clear">
+	<div class="left">
+		<h3>
+			<a href="#">摄影作品 <b>WORK</b></a>
+			<p>Welcome To MIYA photography</p>
+		</h3>
+		<h4>
+			最新案例
+			<b>CASE</b>
+		</h4>
+		<ul>
+			<li>
+				<div class="img">
+					<img src="images/enj2.jpg" alt="">
+					<a href=""></a>
+				</div>
+				<p>十月新都桥婚纱照片——新桥恋人</p>
+			</li>
+		</ul>
+		<div class="hot">
+			<h4>
+				<a href="news.html">最新促销活动</a>
+				<b>CASE</b>
+				<p>EVEVTS</p>
+			</h4>
+			<div class="con1">
+				<img class="img" src="images/d.png" alt="">
+				<p>
+					三亚五天套餐价格18999元
+				</p>
+			</div>
+			<div class="con2">
+				<a href="#">1天丽江双廊婚纱价格3999元</a>
+				<a href="#">1天丽江双廊婚纱价格3999元</a>
+				<a href="#">1天丽江双廊婚纱价格3999元</a>
+			</div>
+		</div>
+	</div>
+	<div class="right">
+		<div class="txt">
+			<div class="txt">
+			<h6>{{title[0].title}}
+			<b>{{title[0].new}}</b>
+				<p>{{title[0].del}}</p>
+			</h6>
+		</div>
+		<ul class="li-box">
+			##for(var i = 0; i < news.length; i++){##
+				<li class="clear">
+					<img class="Ig1" src="{{news[i].img1}}" alt="">
+					<a href="#">
+						<img class="Ig2" src="{{news[i].img}}" alt="">
+					</a>
+					<div class="txt-box">
+						<div class="txt-t">
+							<h2>{{news[i].title}}</h2>
+							<p class="one">{{news[i].txt}}</p>
+							<p class="two">{{news[i].txt2}}</p>
+						</div>
+						<div class="txt-b">
+							{{news[i].more}}
+						</div>
+					</div>
+				</li>
+			##}##
+		</ul>
+	</div>
+</div>

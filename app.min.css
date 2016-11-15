@@ -1,0 +1,995 @@
+#view .top {
+  height: 410px;
+  background: url(app/images/b2.jpg) -303px center;
+}
+#view .content {
+  width: 70%;
+  margin: 0 auto;
+}
+#view .content h3 {
+  font-size: 18px;
+  color: #dc1e1e;
+  padding: 40px 0px 20px;
+  border-bottom: 1px dashed #999999;
+  margin-bottom: 5%;
+}
+#view .content h3 span {
+  color: #666666;
+  text-transform: uppercase;
+}
+#view .content h3 p {
+  font-size: 12px;
+  color: #999999;
+  line-height: 24px;
+}
+#view .content .cont.last {
+  margin-bottom: 4%;
+}
+#view .content .cont .t-p {
+  color: #006666;
+  font-weight: bold;
+  padding-left: 24px;
+  background: url(app/images/smoll_pic.png) 0px -1572px no-repeat scroll rgba(0, 0, 0, 0);
+  border-bottom: 1px dashed #cccccc;
+  margin: 1% 0px;
+}
+#view .content .cont .t-p1 {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 40px 0px 20px;
+  border-bottom: 1px dashed #cccccc;
+  margin: 0px 0 1%;
+}
+#view .content .cont .txt p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 24px;
+  font-family: "微软雅黑";
+}
+#view .content .showBox {
+  position: relative;
+  height: 436px;
+  margin-bottom: 4%;
+  overflow: hidden;
+  border: 5px solid #fff;
+  background: #FFF;
+  -webkit-box-shadow: 0 2px 5px #999999;
+          box-shadow: 0 2px 5px #999999;
+}
+#view .content .showBox .showImg {
+  position: absolute;
+  width: 100%;
+  height: 436px;
+  text-align: center;
+}
+#view .content .showBox .showImg li {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+#view .content .showBox .showImg li img.slideImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+#view .content .showBox .icon {
+  position: absolute;
+  bottom: 3%;
+  right: 50%;
+  margin-right: -170px;
+  width: 340px;
+  height: 30px;
+  z-index: 100;
+  cursor: pointer;
+}
+#view .content .showBox .icon span {
+  display: inline-block;
+  width: 100px;
+  height: 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  margin-left: 10px;
+  background-color: #F8F8CA;
+}
+#view .content .showBox .icon span.active {
+  background-color: #dc1e1e;
+}
+
+.c-top {
+  width: 100%;
+  height: 411px;
+  background: url(app/images/ct.jpg) center no-repeat;
+}
+
+.content .right .txt h5 {
+  font-size: 16px;
+  line-height: 40px;
+  color: #666666;
+  border-bottom: 1px dashed #ddd;
+}
+.content .right .txt h5 p {
+  font-size: 13px;
+  line-height: 27px;
+  color: #999999;
+}
+.content .right .txt .p {
+  padding: 10px 0;
+  color: #666666;
+  font-family: "宋体";
+  font-size: 14px;
+  line-height: 25px;
+}
+.content .right .img-box {
+  padding: 16px 0;
+}
+.content .right .img-box li {
+  border: 5px solid #fff;
+  -webkit-box-shadow: 0 0 10px red;
+          box-shadow: 0 0 10px red;
+  width: 680px;
+  height: 417px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.content .right .img-box img {
+  margin-bottom: 20px;
+}
+.content .right .img-box img:hover {
+  -webkit-box-shadow: 0 0 10px red;
+          box-shadow: 0 0 10px red;
+  -webkit-transform: scale(1.5, 1.5);
+      -ms-transform: scale(1.5, 1.5);
+          transform: scale(1.5, 1.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 14px/1.6 "Microsoft Yahei";
+  background-color: #f5f5f5;
+}
+img {
+  border: 0 none;
+  display: block;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+#view {
+  padding-top: 64px;
+}
+.clear:after {
+  content: '';
+  height: 0;
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+.clear {
+  zoom: 1;
+}
+.inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.hd {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 64px;
+  background: url(app/images/hd_bg.jpg) 0 0 repeat-x;
+}
+.hd .logo {
+  float: left;
+  width: 111px;
+  height: 42px;
+  background: url(app/images/logo.png) no-repeat;
+  margin-top: 11px;
+}
+.hd .nav {
+  float: right;
+  list-style-type: none;
+}
+.hd .nav li {
+  float: left;
+  margin-left: 5px;
+}
+.hd .nav li:hover a,
+.hd .nav li.active a {
+  height: 62px;
+  border-bottom: 2px solid #ff0000;
+  color: #fff;
+}
+.hd .nav a {
+  float: left;
+  padding: 0 10px;
+  line-height: 64px;
+  color: #b7b7b7;
+  text-decoration: none;
+}
+.footer1 {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: #eee;
+  position: relative;
+  padding: 0 1%;
+}
+.footer1 .of1 {
+  padding: 20px 0;
+}
+.footer1 .of1 li {
+  cursor: pointer;
+  height: 36px;
+  padding: 0px 0 0 40px;
+  float: left;
+  margin-right: 20px;
+}
+.footer1 .of1 li a {
+  font-size: 13px;
+  color: #333;
+  line-height: 18px;
+  display: inline-block;
+}
+.footer1 .of1 li.one {
+  background: -5px -1059px url(app/images/smoll_pic.png) no-repeat;
+}
+.footer1 .of1 li.two {
+  background: -5px -997px url(app/images/smoll_pic.png) no-repeat;
+}
+.footer1 .of1 li.three {
+  background: -5px -941px url(app/images/smoll_pic.png) no-repeat;
+}
+.footer1 p {
+  width: 70%;
+  height: 36px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #787878;
+}
+.footer1 p.one {
+  padding-top: 10px;
+}
+.footer1 p.two {
+  padding-top: 5px;
+}
+.footer1 .img-icon {
+  cursor: pointer;
+  width: 148px;
+  height: 91px;
+  overflow: hidden;
+  position: absolute;
+  right: 1px;
+  bottom: 0px;
+  background: url(app/images/smoll_pic.png) -765px -956px no-repeat;
+}
+.footer2 {
+  position: relative;
+  height: 50px;
+  background-color: #2e2e2e;
+}
+.footer2 .f-a {
+  background: url(app/images/smoll_pic.png) -765px -975px no-repeat;
+  position: absolute;
+  bottom: 0px;
+  left: 10%;
+  display: block;
+  width: 230px;
+  height: 69px;
+}
+.footer2 .f-a p {
+  width: 100px;
+  position: absolute;
+  top: 32%;
+  right: 0;
+}
+.footer2 .f-a p span {
+  color: #d1313b;
+  font-size: 16px;
+  font-weight: bold;
+}
+.footer2 .f-a p b {
+  font-size: 14px;
+  color: #FFF;
+}
+.footer2 .f-rig {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+}
+.footer2 .f-rig .f-txt {
+  float: left;
+  padding: 3px 10px 3px 20px;
+  text-align: right;
+  background: url(app/images/f-b.png) left center no-repeat;
+}
+.footer2 .f-rig .f-txt p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+.footer2 .f-rig .f-txt b {
+  color: #999;
+}
+.footer2 .f-rig .f-txt a {
+  font-size: 11px;
+  color: #d72424;
+  text-decoration: none;
+}
+.footer2 .f-rig .f-txt:hover p {
+  color: orange;
+}
+.footer2 .f-rig .f-txt:hover b {
+  color: #fff;
+}
+.footer2 .f-rig .f-txt:hover a {
+  color: #999;
+}
+.top {
+  height: 411px;
+  background: url(app/images/news.jpg) center;
+}
+.content {
+  width: 72%;
+  margin: 0 auto;
+}
+.content .left {
+  width: 25%;
+  float: left;
+}
+.content .left img {
+  width: 100%;
+}
+.content .left img:hover {
+  -webkit-box-shadow: 0 0 10px red;
+          box-shadow: 0 0 10px red;
+}
+.content .left h3 {
+  margin: 20px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ddd;
+}
+.content .left h3 a {
+  font-size: 20px;
+  color: #dc1e1e;
+  font-size: 24px;
+}
+.content .left h3 a b {
+  color: #666;
+}
+.content .left h3 p {
+  color: #666;
+}
+.content .left h4 {
+  color: #d8201e;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+.content .left h4 a {
+  color: #d8201e;
+}
+.content .left h4 b,
+.content .left h4 p {
+  font-size: 18px;
+  color: #666;
+}
+.content .left ul {
+  margin-bottom: 20px;
+}
+.content .left ul li {
+  border-bottom: 1px dashed #ddd;
+  padding: 6px 0;
+}
+.content .left ul li p {
+  margin-top: 10px;
+  text-align: center;
+}
+.content .left .hot {
+  cursor: pointer;
+}
+.content .left .hot .con1 {
+  margin-bottom: 10px;
+}
+.content .left .hot .con1 .img {
+  float: left;
+  margin-right: 15px;
+  width: 100px;
+}
+.content .left .hot .con1 p {
+  padding: 20px;
+  color: #ff0000;
+}
+.content .left .hot .con2 {
+  margin-bottom: 20px;
+}
+.content .left .hot .con2 a {
+  border-bottom: 1px dashed #ddd;
+  line-height: 30px;
+  font-size: 12px;
+  color: #666;
+  font-family: "微软雅黑";
+  display: block;
+}
+.content .left .hot .con2 a:hover {
+  color: #5F7AF6;
+}
+.content .right {
+  float: right;
+  width: 70%;
+  padding: 15px 0;
+}
+.content .right .txt h6 {
+  color: #333;
+  padding: 5px;
+  font-size: 20px;
+  background: #E3E3E3;
+  margin-left: 12px;
+  border-left: solid #CCC 1px;
+}
+.content .right .txt h6 b {
+  color: #dc1e1e;
+}
+.content .right .txt p {
+  font-size: 13px;
+  line-height: 27px;
+  color: #999999;
+}
+.content .right .li-box li {
+  padding: 3px 0 3px 12px;
+  overflow: hidden;
+  position: relative;
+}
+.content .right .li-box li a {
+  display: block;
+  width: 133px;
+  height: 100px;
+  float: left;
+  text-align: center;
+  padding: 16px 0 0 11px;
+}
+.content .right .li-box li a .Ig2 {
+  width: 121px;
+  height: 88px;
+  overflow: hidden;
+  padding: 5px;
+  background: #FFF;
+  border: #999 solid 1px;
+}
+.content .right .li-box li img {
+  float: left;
+}
+.content .right .li-box li .txt-box {
+  width: 60%;
+  padding: 20px 0 0 18px;
+  float: left;
+}
+.content .right .li-box li .txt-box h2 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #535353;
+}
+.content .right .li-box li .txt-box p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+}
+.content .right .li-box li .txt-box p.two {
+  cursor: pointer;
+  color: #ff0000;
+}
+.content .right .li-box li .txt-b {
+  font-size: 12px;
+  line-height: 20px;
+  color: #F79999;
+  display: none;
+}
+
+#dowebok {
+  margin-top: 64px;
+}
+#dowebok .inner {
+  width: 960px;
+  heigth: 615px;
+}
+#dowebok .section1 {
+  background: #d09255 url(app/images/b2.png) top center no-repeat;
+}
+#dowebok .text {
+  position: absolute;
+  top: 20%;
+  left: -120%;
+  text-align: left;
+}
+#dowebok .text h1 span {
+  font-size: 72px;
+  color: #FC0;
+  font-weight: bolder;
+  background: url(app/images/smoll_pic.png) no-repeat -789px -1098px;
+  padding: 8px;
+}
+#dowebok .text h1 b {
+  font-size: 42px;
+  color: #FFD300;
+  margin-left: 5px;
+}
+#dowebok .text .txt {
+  line-height: 30px;
+  color: #fff;
+  font-size: 22px;
+}
+#dowebok .text .txt b {
+  display: block;
+  width: 600px;
+  font-size: 38px;
+  color: #FFF;
+  padding: 5px 0 15px 0;
+}
+#dowebok .section2 {
+  background: #43464d url(app/images/b3.png) top center no-repeat;
+}
+#dowebok .section3 {
+  background: #80cca0 url(app/images/b1.png) top center no-repeat;
+}
+#dowebok .section4 {
+  background: url(app/images/bg03.png) 0 0 repeat-x;
+}
+#dowebok .section4 .fp-controlArrow {
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  border: 0 none;
+}
+#dowebok .section4 .fp-prev {
+  left: 100px;
+  background: url(app/images/left_control.png) 50% no-repeat;
+}
+#dowebok .section4 .fp-next {
+  right: 100px;
+  background: url(app/images/right_control.png) 50% no-repeat;
+}
+#dowebok .section4 .slide {
+  position: relative;
+  height: 615px;
+}
+#dowebok .section4 .slide h2 {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  color: #ff0000;
+  font-size: 36px;
+}
+#dowebok .section4 .slide h2 b {
+  font-size: 36px;
+  color: #333;
+}
+#dowebok .section4 .slide .two-t {
+  height: 50px;
+}
+#dowebok .section4 .slide .two-t .more {
+  position: absolute;
+  font-size: 20px;
+  color: #999;
+  top: 7%;
+  right: 0;
+  border: 2px solid #999;
+}
+#dowebok .section4 .slide .show-box {
+  float: left;
+}
+#dowebok .section4 .slide .show-box .img-t {
+  float: left;
+}
+#dowebok .section4 .slide .show-box .show-a {
+  width: 164px;
+  height: 239px;
+  float: left;
+  overflow: hidden;
+  padding-left: 30px;
+  position: relative;
+}
+#dowebok .section4 .slide .show-box .show-a a {
+  display: block;
+  width: 165px;
+  height: 239px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  background: no-repeat -170px -184px url(app/images/smoll_pic.png);
+}
+#dowebok .section4 .slide .show-box .show-a a:hover {
+  background: no-repeat -334px -184px url(app/images/smoll_pic.png);
+}
+#dowebok .section4 .slide .show-box .two {
+  float: left;
+  width: 290px;
+  height: 462px;
+  margin-right: 45px;
+  background: url(app/images/bj04.png) center no-repeat;
+}
+#dowebok .section4 .slide .show-box .two .t-b {
+  position: relative;
+  width: 290px;
+  height: 422px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+#dowebok .section4 .slide .show-box .two .t-b a {
+  display: block;
+  width: 291px;
+  height: 422px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: url(app/images/smoll_pic.png) -311px -425px;
+}
+#dowebok .section4 .slide .show-box .two .t-b a:hover {
+  background: url(app/images/smoll_pic.png) -601px -425px;
+}
+#dowebok .section4 .slide .show-box .two .t-b a .del {
+  display: none;
+  position: absolute;
+  height: 50px;
+  left: 30px;
+  bottom: 15px;
+}
+#dowebok .section4 .slide .show-box .two .t-b a .del span {
+  color: #fff;
+  font-size: 14px;
+}
+#dowebok .section4 .slide .show-box .two .t-b a .del p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+#dowebok .section4 .slide .show-box .two-p0 {
+  padding-left: 0;
+}
+#dowebok .section4 .slide .show-box .last {
+  margin-right: 0;
+}
+#dowebok .section4 .slide .sd3 img {
+  width: 120px;
+}
+#dowebok .section4 .slide .sd3 .sd {
+  float: left;
+  padding: 0px 7px;
+}
+#dowebok .section4 .slide .sd3 .sd .txt {
+  height: 80px;
+  text-align: center;
+}
+#dowebok .section4 .slide .sd3 .sd .txt p {
+  line-height: 28px;
+}
+#dowebok .section4 .slide .sd3 .sd .txt span {
+  color: #fb9090;
+}
+#dowebok .section4 .slide .sd3 .sd .img {
+  width: 120px;
+  height: 175px;
+  position: relative;
+}
+#dowebok .section4 .slide .sd3 .sd .img a {
+  width: 120px;
+  height: 175px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(app/images/sd3-bg.png) 0 0 no-repeat;
+}
+#dowebok .section4 .slide .sd3 .sd .img a:hover {
+  background: url(app/images/sd3-bg.png) -120px 0 no-repeat;
+}
+#dowebok .section5 {
+  height: 100%;
+}
+#dowebok .section5 .con1 {
+  width: 75%;
+  margin: 0 auto;
+}
+#dowebok .section5 .con1 ul {
+  padding-bottom: 40px;
+}
+#dowebok .section5 .con1 ul li {
+  width: 25%;
+  float: left;
+}
+#dowebok .section5 .con1 ul li h3 {
+  font-size: 18px;
+  line-height: 60px;
+}
+#dowebok .section5 .con1 ul li .icon {
+  background-repeat: no-repeat;
+  height: 32px;
+}
+#dowebok .section5 .con1 ul li .icon a {
+  background: url(app/images/f-b2.png) 0 -32px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+#dowebok .section5 .con1 ul li .icon a.one {
+  background-position: 0 -32px;
+}
+#dowebok .section5 .con1 ul li .icon a.two {
+  background-position: -36px -32px;
+}
+#dowebok .section5 .con1 ul li .icon a.thr {
+  background-position: -72px -32px;
+}
+#dowebok .section5 .con1 ul li .icon a.four {
+  background-position: -108px -32px;
+}
+#dowebok .section5 .con1 ul li .l-2 a {
+  padding-left: 8px;
+  display: block;
+  color: #2e2e2e;
+  line-height: 26px;
+  width: 60%;
+  border-bottom: 1px solid #898989;
+}
+#dowebok .section5 .con1 ul li .l-2 a:hover {
+  color: orange;
+}
+#dowebok .section5 .con1 ul li .con {
+  background: url(app/images/f-b2.png) -82px -64px no-repeat;
+}
+#dowebok .section5 .con1 ul li .con a {
+  padding-left: 30px;
+  line-height: 20px;
+  margin-bottom: 30px;
+  color: #2e2e2e;
+  display: block;
+}
+#dowebok .section5 .con1 ul li .con a.last {
+  font-size: 20px;
+  font-weight: bold;
+}
+#dowebok .section5 .con2 {
+  background: #131313;
+  padding-bottom: 5%;
+  padding-top: 5px;
+}
+#dowebok .section5 .con2 img {
+  margin: 2% 0px 1% 13%;
+}
+#dowebok .section5 .con2 .txt {
+  width: 75%;
+  margin: 0 auto;
+  border-top: 1px solid #ddd;
+}
+#dowebok .section5 .con2 .txt a {
+  color: #e72234;
+  line-height: 50px;
+  padding-left: 10px;
+}
+#dowebok .section5 .footer {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  background-color: #2e2e2e;
+  height: 50px;
+}
+#dowebok .section5 .footer .f-a {
+  background: url(app/images/smoll_pic.png) -765px -975px no-repeat;
+  position: absolute;
+  bottom: -8px;
+  left: 10%;
+  display: block;
+  width: 230px;
+  height: 80px;
+}
+#dowebok .section5 .footer .f-a p {
+  width: 100px;
+  position: absolute;
+  top: 32%;
+  right: 0;
+}
+#dowebok .section5 .footer .f-a p span {
+  color: #d1313b;
+  font-size: 16px;
+  font-weight: bold;
+}
+#dowebok .section5 .footer .f-a p b {
+  font-size: 14px;
+  color: #FFF;
+}
+#dowebok .section5 .footer .f-rig {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+}
+#dowebok .section5 .footer .f-rig .f-txt {
+  float: left;
+  padding: 3px 10px 3px 20px;
+  text-align: right;
+  background: url(app/images/f-b.png) left center no-repeat;
+}
+#dowebok .section5 .footer .f-rig .f-txt p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+#dowebok .section5 .footer .f-rig .f-txt b {
+  color: #999;
+}
+#dowebok .section5 .footer .f-rig .f-txt a {
+  font-size: 11px;
+  color: #d72424;
+  text-decoration: none;
+}
+#dowebok .section5 .footer .f-rig .f-txt:hover p {
+  color: orange;
+}
+#dowebok .section5 .footer .f-rig .f-txt:hover b {
+  color: #fff;
+}
+#dowebok .section5 .footer .f-rig .f-txt:hover a {
+  color: #999;
+}
+
+
+.content .right .li-box li {
+  padding: 3px 0 3px 12px;
+  overflow: hidden;
+  position: relative;
+}
+.content .right .li-box li a {
+  display: block;
+  width: 133px;
+  height: 100px;
+  float: left;
+  text-align: center;
+  padding: 16px 0 0 11px;
+}
+.content .right .li-box li a .Ig2 {
+  width: 121px;
+  height: 88px;
+  overflow: hidden;
+  padding: 5px;
+  background: #FFF;
+  border: #999 solid 1px;
+}
+.content .right .li-box li img {
+  float: left;
+}
+.content .right .li-box li .txt-box {
+  width: 60%;
+  padding: 20px 0 0 18px;
+  float: left;
+}
+.content .right .li-box li .txt-box h2 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #535353;
+}
+.content .right .li-box li .txt-box p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+}
+.content .right .li-box li .txt-box p.two {
+  cursor: pointer;
+  color: #ff0000;
+}
+.content .right .li-box li .txt-b {
+  font-size: 12px;
+  line-height: 20px;
+  color: #F79999;
+  display: none;
+}
+
+.width {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.top {
+  background: url(app/images/p1.jpg);
+  height: 411px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.top .txt {
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+  line-height: 240px;
+}
+.top .txt b {
+  font-weight: bold;
+  color: #FC0;
+}
+.top .title {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  background: #eee;
+  padding-bottom: 8px;
+  color: #666;
+  border-bottom: 1px dashed #ddd;
+}
+.top .title h3 {
+  float: left;
+  margin-top: 20px;
+}
+.top .title h3 a {
+  font-size: 20px;
+  color: #dc1e1e;
+  font-size: 24px;
+}
+.top .title h3 a b {
+  color: #666;
+}
+.top .title .left {
+  cursor: pointer;
+  float: right;
+  margin-top: 60px;
+}
+.top .title .left a {
+  padding: 0px 10px;
+  border-left: 1px solid #4B4646;
+}
+.top .title .left a.active,
+.top .title .left a:hover {
+  color: #ff0000;
+}
+.show-box .show {
+  display: none;
+  background-color: #eee;
+  padding: 1% 15px;
+  margin-bottom: 5%;
+  -webkit-box-shadow: 0px 0px 10px #4C4B4B;
+          box-shadow: 0px 0px 10px #4C4B4B;
+}
+.show-box .show .img-list {
+  cursor: pointer;
+  float: left;
+  margin-right: 22px;
+  position: relative;
+}
+.show-box .show .img-list:last-child {
+  margin-right: 0;
+}
+.show-box .show .img-list .mask {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 290px;
+  height: 422px;
+  background: url(app/images/mask.png) 0 0 no-repeat;
+}
+.show-box .show .txt {
+  padding: 15px 0;
+  text-align: center;
+}
+.show-box .show .txt p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #666666;
+}
+.show-box .show .txt h2 {
+  font-size: 20px;
+  line-height: 40px;
+  color: #df4920;
+}
+.show-box .show .last {
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  color: #6E6E6E;
+}

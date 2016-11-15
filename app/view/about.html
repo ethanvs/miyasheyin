@@ -1,0 +1,53 @@
+<div class="top"></div>
+<div class="content">
+    <div>
+        <h3>
+			{{abArr[0].title}}<span>{{abArr[0].title1}}</span>
+			<p>{{abArr[0].title2}}</p>
+		</h3>
+        <div class="cont">
+            <p class="t-p">关于弥亚</p>
+            <div class="txt">
+                ##for(var i=0;i
+                <txt1.length;i++){## <p class="p1">{{txt1[i].txt}}</p>
+                    ##}##
+            </div>
+        </div>
+        <div class="cont">
+            <p class="t-p1">专业团队</p>
+            <div class="txt">
+                ##for(var i=0;i
+                <txt2.length;i++){## <p class="p1">{{txt2[i].txt}}</p>
+                    ##}##
+            </div>
+        </div>
+        <div class="cont">
+            <p class="t-p1">服务与技术</p>
+            <div class="txt">
+                ##for(var i=0;i
+                <txt3.length;i++){## <p class="p1">{{txt3[i].txt}}</p>
+                    ##}##
+            </div>
+        </div>
+        <div class="cont last">
+            <p class="t-p1">摄影景点</p>
+            <div class="txt">
+                ##for(var i=0;i
+                <txt4.length;i++){## <p class="p1">{{txt4[i].txt}}</p>
+                    ##}##
+            </div>
+        </div>
+    </div>
+    <div class="showBox">
+	    <ul class="showImg">
+			##for(var i=0;i<imgArr.length;i++){##
+			<li><img class="slideImg" src="{{imgArr[i].img}}" alt=""></li>
+			##}##
+		</ul>
+		<div class="icon">
+			##for(var i=0;i<imgArr.length;i++){##
+			<span></span>
+			##}##
+		</div>
+    </div>
+</div>

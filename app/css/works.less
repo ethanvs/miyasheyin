@@ -1,0 +1,107 @@
+.width {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.top {
+    background: url(app/images/p1.jpg);
+    height: 411px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .txt {
+        font-size: 60px;
+        color: #fff;
+        text-align: center;
+        line-height: 240px;
+        b {
+            font-weight: bold;
+            color: #FC0;
+        }
+    }
+    .title {
+        position: absolute;
+        bottom: 0;
+        left: 15%;
+        background: #eee;
+        padding-bottom: 8px;
+        color: #666;
+        border-bottom: 1px dashed #ddd;
+        h3 {
+            float: left;
+            margin-top: 20px;
+            a {
+                font-size: 20px;
+                color: #dc1e1e;
+                font-size: 24px;
+                b {
+                    color: #666;
+                }
+            }
+        }
+        .left {
+        	cursor: pointer;
+            float: right;
+            margin-top: 60px;
+            a {
+                padding: 0px 10px;
+                border-left: 1px solid #4B4646;
+                &.active,&:hover{
+                	color: #ff0000;
+                }
+            }
+        }
+    }
+}
+.show-box{
+	.show {
+		display: none;
+	    background-color: #eee;
+	    padding: 1% 15px;
+		 margin-bottom: 5%;
+	    box-shadow: 0px 0px 10px #4C4B4B;
+	    .img-list {
+	        cursor: pointer;
+	        float: left;
+	        margin-right: 22px;
+	        position: relative;
+	        &:last-child {
+	            margin-right: 0;
+	        }
+	        .mask {
+	            display: none;
+	            position: absolute;
+	            top: 0;
+	            left: 0;
+	            width: 290px;
+	            height: 422px;
+	            background: url(app/images/mask.png) 0 0 no-repeat;
+	        }
+	    }
+	    .txt {
+	        padding: 15px 0;
+	        text-align: center;
+	        p {
+	            font-family: Arial, Helvetica, sans-serif;
+	            font-size: 13px;
+	            color: #666666;
+	        }
+	        h2 {
+	            font-size: 20px;
+	            line-height: 40px;
+	            color: #df4920;
+	        }
+	    }
+	    .last {
+	        text-align: center;
+	        padding: 5px 10px 5px 10px;
+	        color: #6E6E6E;
+	        // margin-right: 2px;
+	    }
+	}
+}
+
+
+
